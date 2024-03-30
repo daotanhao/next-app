@@ -15,7 +15,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center">
+    <div className="h-full w-full flex flex-col items-center justify-center scroll-auto">
       <Button color="primary">abc</Button>
       <Select label="Select an animal" className="max-w-xs">
         <SelectItem key="Lion">Lion</SelectItem>
