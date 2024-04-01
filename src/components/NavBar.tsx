@@ -6,7 +6,6 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
   DropdownTrigger,
   Input,
   Dropdown,
@@ -14,30 +13,34 @@ import {
   DropdownItem,
   Avatar,
 } from "@nextui-org/react";
-import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { LogoIcon } from "./LogoIcon";
 const NavBar = () => {
   return (
     <Navbar shouldHideOnScroll>
       <NavbarContent justify="start">
-        <NavbarBrand className="mr-4">
+        <NavbarBrand className="mr-10">
           <LogoIcon />
         </NavbarBrand>
-        <NavbarContent className="hidden sm:flex gap-3">
+        <NavbarContent className="hidden sm:flex gap-8">
           <NavbarItem>
             <Link color="foreground" href="#">
-              Features
+              Home
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
-              Customers
+            <Link href="#" color="foreground" aria-current="page">
+              Catalog
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link color="foreground" href="#">
-              Integrations
+              News
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Collections
             </Link>
           </NavbarItem>
         </NavbarContent>
@@ -46,7 +49,7 @@ const NavBar = () => {
       <NavbarContent as="div" className="items-center" justify="end">
         <Input
           classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10",
+            base: "max-w-full sm:max-w-[20rem] h-10",
             mainWrapper: "h-full",
             input: "text-small",
             inputWrapper:
